@@ -13,4 +13,5 @@ public class Employee {
     public String des;
     @ColumnInfo(name = "salary")
     public int salary;
+
 }

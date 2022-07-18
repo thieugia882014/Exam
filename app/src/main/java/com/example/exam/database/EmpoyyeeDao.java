@@ -13,15 +13,15 @@ public interface EmpoyyeeDao {
     @Insert
     long inserUser(Employee employee);
 
-    @Update
-    int updateUser(Employee employee);
-
-    @Delete
-    int deleteUser(Employee employee);
-
     @Query("Select * from Employee where id = :id")
-    Employee findUser(int id);
+    Employee findById(int id);
 
     @Query("Select * from employee")
-    List<Employee> getAllUser();
+    List<Employee> getAll();
+
+    @Update
+    int update(Employee employee);
+
+    @Delete
+    int delete(Employee employee);
 }
